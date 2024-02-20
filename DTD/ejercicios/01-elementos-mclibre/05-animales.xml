@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales [
+  <!ELEMENT animales (animal*)><!--<animales> debe contener 0 o más <animal> (ni <perro>, ni <gato>-->
+  <!ELEMENT animal (#PCDATA)>
+]>
+
+<animales>
+  <!--<perro>Caniche</perro>
+  <gato>Siamés</gato>-->
+  <animal>Perro Caniche</animal>
+  <animal>Gato Siamés</animal>
+</animales>

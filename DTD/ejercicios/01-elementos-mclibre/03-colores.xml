@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE colores [
+  <!ELEMENT colores (color*)><!-- <colores> debe contener 0 o más <colores>-->
+  <!ELEMENT color (#PCDATA)>
+]>
+
+<colores>
+  <color>azul marino</color>
+ <color>negro</color><!-- faltaba rodear a "negro" que es el #PCDATA con <color>-->
+  <color>amarillo</color>
+</colores>
