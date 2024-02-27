@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE inventores [
+<!--<!DOCTYPE inventores [
   <!ELEMENT inventores>
   <!ELEMENT inventor EMPTY>
   <!ATTLIST inventor invento CDATA #REQUIRED>
   <!ATTLIST inventor nombre ID #REQUIRED>
+]>-->
+<!DOCTYPE inventores [
+  <!ELEMENT inventores (inventor*)><!-- también vale (inventor+)-->
+  <!ELEMENT inventor EMPTY>
+  <!ATTLIST inventor nombre CDATA #IMPLIED>
+  <!ATTLIST inventor invento CDATA #REQUIRED>
 ]>
 
 <inventores>
