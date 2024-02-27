@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- declaración XML-->
+<mensajes xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+xs:noNamespaceSchemaLocation="mensajes.xsd"><!-- elemento raíz referenciando al fichero xsd; el resto del fichero xml, como siempre-->
+    <de>Anna</de>
+    <para>Rocío</para>
+    <mensaje>Ya estoy en la biblioteca</mensaje>
+</mensajes>
