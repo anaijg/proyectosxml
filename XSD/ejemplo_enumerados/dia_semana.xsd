@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dia_semana">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="lunes"/>
+                <xs:enumeration value="martes"/>
+                <xs:enumeration value="miércoles"/>
+                <xs:enumeration value="jueves"/>
+                <xs:enumeration value="viernes"/>
+                <xs:enumeration value="sábado"/>
+                <xs:enumeration value="domingo"/>
+                <xs:whiteSpace value="collapse"/><!-- así deja que haya espacios entre el contenido del elemento (el texto) y las etiquetas de apertura / cierre-->
+            </xs:restriction>
+        </xs:simpleType>        
+    </xs:element>
+</xs:schema>
