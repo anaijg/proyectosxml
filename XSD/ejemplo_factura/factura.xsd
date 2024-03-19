@@ -8,7 +8,13 @@
                     <xs:complexType>
                         <xs:sequence>
                            <xs:element name="nombre" type="xs:string"/>
-                           <xs:element name="CIF" type="xs:string"/>
+                           <xs:element name="CIF"><!-- no ponemos el tipo de dato porque añadimos la restricción del número de caracteres; lo trasladamos a xs:restriction base -->
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:length value="9"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                           </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="direccion">
+        <!-- me dicen que una dirección puede tener un elemento <particular> 
+            o bien un elemento <profesional> (pero no ambos)-->
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="particular" type="xs:string"/>
+                <xs:element name="profesional" type="xs:string"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
