@@ -15,6 +15,8 @@
         <descripcion>Maquetacion</descripcion>
         <importe>500.50</importe>
     </concepto>
-    <impuesto nombre = "IVA">PENDIENTE</impuesto>
+    <impuesto nombre = "IVA">
+        PENDIENTE
+    </impuesto>
     <total_factura euros="1500.50"/>
 </factura>
