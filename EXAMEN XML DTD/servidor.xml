@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE servicio_web [
+    <!ELEMENT servicio_web (programa, fecha_creacion, fecha_ultima_actualizacion, alojamiento, servidor_virtual+)>
+    <!ELEMENT programa (#PCDATA)>
+    <!ATTLIST programa s_web (Apache | IIS) #REQUIRED>
+    <!ELEMENT fecha_creacion (#PCDATA)>
+    <!ELEMENT fecha_ultima_actualizacion (#PCDATA)>
+    <!ELEMENT alojamiento (nombre, precio)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+   <!ELEMENT servidor_virtual (dominio, directorio, modo_seguro, incidente*)>
+    <!ATTLIST servidor_virtual codigo ID #REQUIRED>
+    <!ELEMENT dominio (#PCDATA)>
+    <!ELEMENT directorio (#PCDATA)>
+    <!ELEMENT modo_seguro EMPTY>
+    <!ATTLIST modo_seguro seguro (true | false) "false">
+    <!ELEMENT incidente (descripcion, solucion_adoptada)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT solucion_adoptada (#PCDATA)>
+    <!ATTLIST incidente id_servidor IDREF #REQUIRED>
+]>
+
+<servicio_web>
+    <programa s_web="Apache">WordPress</programa>
+    <fecha_creacion>2024-03-05</fecha_creacion>
+    <fecha_ultima_actualizacion>2024-03-05</fecha_ultima_actualizacion>
+    <alojamiento>
+        <nombre>Ionos</nombre>
+        <precio>5</precio>
+    </alojamiento>
+    <servidor_virtual codigo="sv1">
+        <dominio>miweb.org</dominio>  
+        <directorio>/var/www/miweb</directorio> 
+        <modo_seguro />   
+        <incidente id_servidor="sv1">
+            <descripcion>Desbordamiento de disco por los logs generados</descripcion>
+            <solucion_adoptada>Implementar script de vaciado de logs que se ejecute cada semana.</solucion_adoptada>
+
+        </incidente>  
+    </servidor_virtual>
+</servicio_web>
