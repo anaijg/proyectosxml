@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<registro_temperatura
-    xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-    xs:noNamespaceSchemaLocation="registro_temperatura.xsd">
-        <incidencia nombre="frio" />
-</registro_temperatura>
