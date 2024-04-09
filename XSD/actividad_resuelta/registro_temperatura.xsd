@@ -9,51 +9,25 @@
         <xs:enumeration value="calor"/>
     </xs:restriction>
 </xs:simpleType>
-
 <xs:simpleType name="severidad_incidencia">
     <xs:restriction base="xs:string">
-        <xs:enumeration value="baja"/>
-        <xs:enumeration value="media"/>
         <xs:enumeration value="alta"/>
+        <xs:enumeration value="media"/>
+        <xs:enumeration value="baja"/>
     </xs:restriction>
 </xs:simpleType>
 
 <!-- Y AQUÍ EMPIEZA YA EL ELEMENTO RAÍZ-->
     <xs:element name="registro_temperatura">
         <xs:complexType>
-            <xs:sequence>            
-                <xs:element name="provincia" type="xs:string"/>          
+            <xs:sequence>
+            
+
+            
                 <!--la fecha de registro debe ser una fecha válida-->
-                <xs:element name="fecha" type="xs:date"/>         
                 <!--temperatura mínima >=-50 -->
-                <xs:element name="temperatura_minima">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:integer">
-                            <xs:minInclusive value="-50"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
                 <!--temperatura máxima <= 50-->
-                <xs:element name="temperatura_maxima">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:integer">
-                            <xs:maxInclusive value="50"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
                 <!-- el número de incidencias no tiene límite-->
-                <xs:element name="incidencias">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="incidencia" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:attribute name="nombre" type="nombre_incidencia"/>
-                                    <xs:attribute name="severidad" type="severidad_incidencia"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>                                      
             </xs:sequence>
         </xs:complexType>
     </xs:element>
