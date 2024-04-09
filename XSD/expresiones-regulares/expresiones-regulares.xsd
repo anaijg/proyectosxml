@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="expresiones-regulares">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="expresiones" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!--expresion1-->
+                            <xs:element name="expresion1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="Capítulo [0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <!--expresion2-->
+                            <!--expresion3-->
+                            <!--expresion4-->
+                            <!--expresion5-->
+                            <xs:element>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[^0-9]Z"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <!--expresion6-->
+                            <!--expresion7-->
+                            <!--expresion8-->
+                        </xs:sequence>
+                    </xs:complexType>
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
         
     </xs:element>
 </xs:schema>
+
+<xs:element>
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^0-9]Z.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>

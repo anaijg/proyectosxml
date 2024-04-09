@@ -32,7 +32,8 @@
 - \d: "\d\d" coincidiría con cualquier par de dígitos.
 - \w: "\w+" coincidiría con cualquier palabra alfanumérica o guion bajo.
 - x{n}: "x{5}" coincidiría con "xxxxx"
-- 
+- x{n,m}: a{2,4}-> a tiene que aparecer entre 2 y 4 veces, o sea: 'aa', 'aaa', 'aaaa'
+- x{n,}: b{3,} -> b tiene que aparecer como mínimo 3 veces: 'bbb', 'bbbb', 'bbbbb'...
 
 # Ejercicios
 | Número | Descripción |
@@ -52,18 +53,21 @@
     Capítulo [0|1|2|3|4|5|6|7|8|9]
 
 2. Capítulo [0-9]{1,2}
-   Capítulo [0-9][0-9]
-   Capítulo \d\d
+   Capítulo \d?\d
+   Capítulo [0-99]
 
-3. Capítulo [1-9][0-9]
-   Capítulo [1-9]\d
+3. Capítulo [1-9][0-9]?
+   Capítulo [1-9]\d?
+   Capítulo [1-99]
 
 4. Capítulo [0-9]+
    Capítulo \d+
+   Capítulo [0-9]{1,}
 
 5. [^0-9][Z]
+   [^0-9]Z
 
-6. AB{2,4}C
+6. AB{2,5}C
 
 7. RS{2,}([3-8])?
 
