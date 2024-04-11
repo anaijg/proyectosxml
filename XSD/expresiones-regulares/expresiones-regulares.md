@@ -54,7 +54,6 @@
 
 2. Capítulo [0-9]{1,2}
    Capítulo \d?\d
-   Capítulo [0-99]
 
 3. Capítulo [1-9][0-9]?
    Capítulo [1-9]\d?
