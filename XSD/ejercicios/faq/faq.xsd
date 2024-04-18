@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="faq">
+        <!--El elemento faq está compuesto por solo un elemento info y por uno o más elementos part.-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="info">
+                    <!--El elemento info está compuesto por un titulo, un autor, y puede tener o no email, versión y fecha.-->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="autor" type="xs:string"/>
+                            <xs:element name="email" type="xs:string" minOccurs="0"/>
+                            <!--El elemento versión será una plantilla que permita números seguidos de un punto y seguido de más números.-->
+                            <xs:element name="version" minOccurs="0">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d+\.\d+"/><!-- la barra \ es un carácter de escape para que no interprete . como "cualquier carácter excepto un salto de línea", sino que lo tome literalmente como un punto-->
+                                        <!-- también valdría [0-9]+\.[0-9]+-->
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <!--El elemento fecha será de tipo fecha.-->
+                            <xs:element name="fecha" type="xs:date" minOccurs="0"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="part" minOccurs="1" maxOccurs="unbounded">
+<!--El elemento part puede tener uno o más elementos q.-->
+                <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="q" minOccurs="1" maxOccurs="unbounded">
+                                <!--El elemento q está compuesto por los elementos qtext y a que son obligatorios.-->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="qtext" type="xs:string"/>
+                                        <xs:element name="a" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+
+
+
+
+
+        
+    </xs:element>
+</xs:schema>
