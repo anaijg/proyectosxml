@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<faq>
+<faq xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+xs:noNamespaceSchemaLocation="faq.xsd">
   <info>
     <titulo>WINDOWS98? SOLO SI ME OBLIGAN!</titulo>
     <autor>Fernando Damián Lorenzo García</autor>
